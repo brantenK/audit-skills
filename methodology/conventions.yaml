@@ -1,0 +1,48 @@
+# Base audit methodology used by every skill.
+# A firm or user can override any key in ~/.audit-skills/overrides/conventions.yaml.
+# Engagement-specific values (materiality, client name, year end) live in the
+# engagement folder, never here.
+
+materiality:
+  # Individually significant items are tested 100%.
+  individually_significant_pct_of_pm: 0.75
+  # Overall materiality and performance materiality come from the engagement config.
+
+# Minimum sample size by client category and level of risk.
+# number = minimum number of items, coverage = minimum share of the balance tested.
+# null means "not set yet": fill these in for your firm before relying on them.
+sample_table:
+  "Category A":
+    Low:    {number: null, coverage: null}
+    Medium: {number: 20, coverage: 0.55}
+    High:   {number: 30, coverage: 0.70}
+  "Category B":
+    Low:    {number: null, coverage: null}
+    Medium: {number: null, coverage: null}
+    High:   {number: null, coverage: null}
+  "Category C":
+    Low:    {number: 8,  coverage: 0.40}
+    Medium: {number: 15, coverage: 0.50}
+    High:   {number: 25, coverage: 0.60}
+
+legends:
+  BTB: Agree to trial balance
+  BPYTB: Agree to prior year trial balance
+  "^": Cast
+  "^CC": Cast and cross-cast
+  VINV: Vouched to invoice
+  VBS: Verified to bank statement
+  VJV: Vouched to signed journal voucher
+
+formatting:
+  font: Arial
+  # Only black text and grey shading. No other colours.
+  allowed_fills: ["D9D9D9", "F2F2F2"]
+  number_format: '#,##0.00;(#,##0.00);"-"'
+  date_format: dd mmm yyyy
+
+workpapers:
+  # Prefer editing the prior-year working paper over building a new one.
+  default_build: prior_year_template
+  # Client workpaper folders are read-only unless the user names the file to change.
+  folders_read_only_by_default: true
