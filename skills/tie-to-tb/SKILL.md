@@ -18,8 +18,13 @@ Read `audit-conventions` first.
    `audit-skills tie rollforward --gl <gl.xlsx> --tb <tb.xlsx> --accounts <list>`
    gives opening + credits - debits = closing per GL, compared with closing per TB.
 5. **Compare** the ledger opening with the prior-year audited closing. A difference usually means a
-   prior-year auditor adjustment (AJE or reclassification) that the client never posted. Record it as a
-   finding and ask the client to post it. Do not assume the client reversed it.
+   prior-year auditor adjustment that is in the audit file but not in the client's ledger.
+   - Reclassifications (RCL) are usually presentation-only. The auditor raises them for the financial
+     statements; the client does not post them, and they do not change the total. Explain the difference
+     in a note in the working paper. Do not ask the client to post them and do not call it a finding.
+   - Adjusting entries (AJE) that change amounts are different: ask the user whether the client was
+     expected to post them.
+   - Never assume the client reversed an adjustment.
 6. **Explain the bridge** when asked whether an extract agrees: a list of the year's transactions
    agrees to the movement, not the closing balance. Opening + movement = closing.
 

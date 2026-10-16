@@ -46,8 +46,9 @@ These rules apply to every other audit skill. Read them first.
 
 - Do not write explanations into a working paper that you have not confirmed. If you do not know why a
   balance moved, write it as a question for the client, not as a fact.
-- Auditor adjustments (AJE/RCL) from last year may not be in the client's ledger. Check before assuming
-  the client posted or reversed them.
+- Auditor adjustments from last year may not be in the client's ledger. Reclassifications (RCL) are
+  usually presentation-only: the client does not post them and they do not change totals. Note them in the
+  paper; do not treat them as a client action. Never assume the client posted or reversed an adjustment.
 
 ## 7. Files and folders
 
