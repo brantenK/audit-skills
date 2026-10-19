@@ -15,7 +15,7 @@ SKILLS_DIR = Path(__file__).resolve().parents[1] / "skills"
 
 # Client names and engagement-specific identifiers seen in source material.
 # These must never appear in the public repository.
-BANNED_TERMS = ["GKD", "SAIMM", "Isizwe", "AMS Haden", "583066", "30120"]
+BANNED_TERMS = ["GKD", "SAIMM", "Isizwe", "AMS Haden", "Buismet", "583066", "30120"]
 
 # Colour values outside the grey-only palette (allowed: D9D9D9, F2F2F2).
 BANNED_COLOURS = [
