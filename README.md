@@ -20,6 +20,23 @@ cut-off. The skills get better as you use them, and only with your approval.
 | `vouch-to-bank` | Trace ledger items to bank statements by amount, date and payee |
 | `client-gl-extract` | A plain extract of ledger lines to send to the client |
 | `event-dates-cutoff` | Event and conference dates for prepaid and income-received-in-advance cut-off |
+| `audit-working-paper` | Review, enhance or build a working paper to review standard (ISA 230 documentation, sheet structure, tick marks, coverage boxes, client requests) |
+| `audit-manager` | Supervision pass: golden-thread checks, quality scan for junior mistakes, review discipline |
+| `wp-analytical-standard` | Build or rebuild the Analytical sheet of a testing paper (prior-year categories, subtotals, tick marks) |
+| `wp-procedures-standard` | Build or rewrite the Procedures sheet (objective, assertion codes, ISA references, scope trimming) |
+| `wp-opex-occurrence` | OPEX occurrence sheet: one block per material category, live selections, sampling chain, coverage |
+| `working-paper-700-series` | CaseWare-style 700-series occurrence papers (700.55 pattern) with multi-stream selections |
+| `completeness-combined` | Revenue completeness in one section: sequence gaps, master-to-billing, cut-off and reversals, earned-vs-billed |
+| `revenue-testing-skill` | Build a 7-sheet revenue testing template from scratch (bundled `build_template.py`) |
+| `operating-expense-skill` | Build an 8-sheet expense testing template from scratch (bundled `build_template.py`) |
+| `ppe-analytical-sheet` | Rebuild the PPE movement-analysis sheet (border rules, tick marks, totals reconciliation) |
+| `audit-planning-questionnaire` | Compact a verbose IT-environment planning questionnaire into the two-panel table format |
+| `employee-costs-update` | Roll the employee costs (payroll recon) working paper forward to the current year |
+| `financial-liabilities` | Loans and borrowings working paper: lender list, balances, amortization, tie to TB |
+| `lease-liabilities-working-paper` | Instalment-sale / lease liabilities paper with monthly amortization schedules |
+| `audit-monthly-summary` | GL monthly summary: strict column mapping, helper columns, zero-variance reconciliation to the TB |
+| `trial-balance-analytical` | Restructure a trial-balance analytical schedule: subtotals, SUM formulas, variance analysis, grand-total tie |
+| `age-analysis-transformation` | Convert a raw creditors/debtors age analysis into a one-line-per-vendor summary that ties to source totals |
 
 Plus an MCP server so the agent can run the mechanical steps (extracts, roll-forwards, sampling, bank
 matching, cut-off tables, Excel live editing) instead of improvising them.
