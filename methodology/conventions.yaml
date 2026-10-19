@@ -28,11 +28,22 @@ sample_table:
 legends:
   BTB: Agree to trial balance
   BPYTB: Agree to prior year trial balance
+  BAFS: Agree to annual financial statements
+  BPYAFS: Agree to prior year annual financial statements
   "^": Cast
   "^CC": Cast and cross-cast
   VINV: Vouched to invoice
   VBS: Verified to bank statement
   VJV: Vouched to signed journal voucher
+  VGL: Verified to general ledger
+
+# Tick-mark format (black text only, see formatting):
+# bold anchor letter (B or V), superscript source part (TB, PYTB, GL, AFS, PYAFS),
+# CaseWare reference number on the baseline - never superscripted.
+tick_format:
+  anchor: bold
+  superscript_part: superscript
+  reference_number: baseline
 
 formatting:
   font: Arial
