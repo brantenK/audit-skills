@@ -28,6 +28,21 @@ Read `audit-conventions` first.
 6. **Explain the bridge** when asked whether an extract agrees: a list of the year's transactions
    agrees to the movement, not the closing balance. Opening + movement = closing.
 
+## Reconciliation discipline
+
+- **Simulate before you write.** Run the lookup on the data first (a scratch script or the tool's
+  compare commands) and read the results before any formula goes into a working paper. A lookup
+  that mostly misses means the keys do not match - fix the keys first, do not pepper the paper with
+  `IFERROR(...,0)`.
+- **Gap analysis before linking.** Compare the keys on both sides (for example account codes in the
+  schedule against the TB) and list what is missing on each side. Resolve or explain every gap
+  before you link.
+- **Smart linking.** If a lookup against the client's list fails, try the auditor's own list or the
+  lead sheet before concluding an item is missing.
+- **Variance schedule.** When reconciling two sets of figures, produce a summary table whose
+  variances sum to zero. If they do not, something is unexplained - find it before signing off.
+- **Golden thread.** Every figure in a working paper links to a source. No hardcoded numbers.
+
 ## Output
 
 A roll-forward table in the working paper with a difference column (formula) that must be nil, and a
