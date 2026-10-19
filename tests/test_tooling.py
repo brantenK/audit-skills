@@ -25,7 +25,7 @@ def test_propose_apply_and_install_merges_notes(tmp_path, monkeypatch):
     improve.apply(p.name)
     monkeypatch.chdir(tmp_path)
     done = install.install_skills("claude", project=True)
-    assert len(done) == 7
+    assert len(done) == len(list(install.bundled_skills()))
     skill = (tmp_path / ".claude" / "skills" / "audit-conventions" / "SKILL.md").read_text()
     assert install.MARKER in skill and "Always check trivial" in skill
     # other agents' folders
