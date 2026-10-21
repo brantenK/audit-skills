@@ -33,3 +33,22 @@ The event date decides whether the balance is correctly carried at year end.
 
 `audit-skills cutoff table --events <events.csv> --year-end <yyyy-mm-dd>` builds the table with the
 after-year-end and financial-year flags.
+
+## Recording the source in the paper
+
+- Add a **Source link** column to the event-dates table and put the organiser's page on each row as a
+  hyperlink (short label visible, full URL embedded). The reviewer must be able to click through from
+  the paper without hunting for a folder.
+- Link the **direct event page**, not an "upcoming events" or "past events" index. Individual event
+  pages normally stay live after the event - check before falling back to the index.
+- When no page can be found, write "To confirm with client" - do not leave a date unsupported.
+- Third-party listings (conference calendars, sponsor pages) are acceptable evidence but label them as
+  third-party.
+
+## Use of AI-assisted research
+
+- Public sources may be researched with AI-assisted search. Record that in the paper (e.g. "dates
+  researched using AI-assisted search of the organiser's website; source link per event; results
+  reviewed by the engagement team").
+- The link is the evidence; the AI is only the search tool. Never record an event date without a link or
+  a client document.

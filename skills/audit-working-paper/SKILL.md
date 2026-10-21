@@ -7,6 +7,10 @@ description: Review, enhance or build an audit working paper in Excel to review 
 
 Read `audit-conventions` first.
 
+> **If a prior-year paper exists for this section, stop and use `update-from-prior-year` instead of
+> building a new layout.** Copy the prior-year workbook, keep its structure and update it. Only build
+> from scratch when the user asks for it.
+
 Excel edits follow `audit-conventions` §8: live mode edits an open workbook and needs the user's `audit-skills approve` first; show the user what will be written and wait for approval; verify after.
 
 ## 1. Documentation standards
