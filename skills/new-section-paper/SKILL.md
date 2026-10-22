@@ -98,7 +98,7 @@ Rules:
 | Table and section headers | Arial 10 bold, fill `#D9D9D9`, black borders |
 | Account title rows | Arial 10 bold, fill `#D9D9D9`, black perimeter |
 | Totals / subtotals / Selected total | Bold, no fill, single top border + double bottom (grand total) |
-| Narrative rows | Merged across the table width, wrap text, no fill |
+| Narrative rows | Plain text starting in column A, running no further than column H. When the sentence passes H, continue it on the next row from column A. **Do not merge and do not wrap.** One thought per line, no clipped text. |
 | Hyperlinks (source links) | Blue `#0000FF`, underlined, short label |
 | Tick marks | Anchor & Float: green bold anchor, green superscript source, red non-superscript reference |
 | Numbers | `#,##0.00` (financial: `#,##0.00;[Red](#,##0.00);-`) |
