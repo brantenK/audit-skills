@@ -104,11 +104,12 @@ Rules:
 | Numbers | `#,##0.00` (financial: `#,##0.00;[Red](#,##0.00);-`) |
 | Dates | `dd/mm/yyyy`, real dates |
 
-Spacing:
-- **One blank row before every section or sub-section heading**, and one blank row after a heading band
-  before the next heading. A heading never sits directly against the block above it.
+Spacing - a heading always breathes on both sides:
+- **One blank row before** every section or sub-section heading - it never sits against the block above it.
+- **One blank row after** every heading, before its own text or table.
+- **One blank row between a note block and the table that follows it.**
 - Keep exactly **one** blank row - not two, not seven. Tidy leftover gaps when pasting content in.
-- No blank row between a heading's own narrative note and its table.
+- This mirrors the template's own header block: `Objective:` row 7, blank row 8, text row 9.
 
 Highlights - two colours only:
 
