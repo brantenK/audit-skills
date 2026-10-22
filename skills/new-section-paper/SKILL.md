@@ -104,10 +104,16 @@ Rules:
 | Numbers | `#,##0.00` (financial: `#,##0.00;[Red](#,##0.00);-`) |
 | Dates | `dd/mm/yyyy`, real dates |
 
-Highlights:
-- **Green `#00B050`** - rows selected/sampled for testing (mark the GL rows themselves).
-- **Material / key items** - highlight only when the user asks; use the colour they name.
-- **Exceptions** - highlight only when the user asks; ask which colour.
+Highlights - two colours only:
+
+- **Light yellow `#FFFF99`** - exceptions, errors, and anything we are not yet sure of. This is the
+  default signal that a line needs the reviewer's attention. Use it without being asked.
+- **Light grey `#D9D9D9`** - everything else: table headers, column headers, account title rows,
+  section dividers. Grey is the house fill.
+- **Green `#00B050`** - only when the user asks for sampled rows to be marked in a GL extract. Not a
+  default.
+- **Material / key items** - no fill of their own. Highlight them only when the user asks, in the
+  colour they name.
 - No other fills. No stray colours, old borders, mixed date formats or half-formatted blocks.
 
 ## 7. Sampling
