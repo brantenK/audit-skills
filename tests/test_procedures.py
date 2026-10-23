@@ -27,6 +27,22 @@ def test_extract_counts_and_totals(gl_file, tmp_path):
     assert ws.cell(5, 12).value is None
 
 
+def test_extract_does_not_freeze_panes_by_default(gl_file, tmp_path):
+    out = tmp_path / "unfrozen.xlsx"
+    extract.gl_extract(read_gl(gl_file), out, "Synthetic Entity", "Ledger extract", "Synthetic")
+    wb = openpyxl.load_workbook(out)
+    assert wb.active.freeze_panes is None
+    wb.close()
+
+
+def test_empty_extract_does_not_freeze_panes_by_default(tmp_path):
+    out = tmp_path / "empty.xlsx"
+    extract.gl_extract([], out, "Synthetic Entity", "Ledger extract", "Synthetic")
+    wb = openpyxl.load_workbook(out)
+    assert wb.active.freeze_panes is None
+    wb.close()
+
+
 def test_rollforward_bridge_and_unposted_adjustment(gl_file, tb_file, py_tb_file):
     lines = read_gl(gl_file)
     rows = tie.rollforward(lines, read_balances(tb_file), ["9100/101", "9100/102"], read_balances(py_tb_file))

@@ -9,6 +9,8 @@ Read `audit-conventions` first.
 
 Replicates the prior-year 700.55 skeleton with current-year data, split into stream selections (one block per revenue stream in scope).
 
+Before populating it, agree exact revenue lead-sheet accounts to the TB/GL and check every selected posting. Income-in-advance and other-income accounts outside the lead are not occurrence picks. A release journal can be in scope on its recognised-revenue credit. Preserve the approved sample count/method; follow the scope-correction rules in `audit-sampling-pack` before removing or replacing items.
+
 Follow `audit-conventions` §8 Excel mode for live edits: the user runs `audit-skills approve` on the workbook first; show what will be written, wait for approval, verify after, keep a backup.
 
 ## Skeleton (top to bottom - do not reorder)
@@ -28,7 +30,7 @@ Follow `audit-conventions` §8 Excel mode for live edits: the user runs `audit-s
 | spacer | E | widened (>=6), no borders |
 | Per invoice | F-I | Invoice number, Invoice date, Debtor name and code, Amount per invoice |
 | spacer | J | widened (>=6) |
-| Testing | K-T | Delivery note no/date (or N2), price list (N1), VAT recalc **`N =I*0.15` live formula**, VAT ok, period, debtors ledger, third-party taxes, recognition criteria |
+| Testing | K-T | Adapt evidence fields to the revenue type; do not request generic delivery notes for membership/conferences. VAT recalculation uses the supported applicable rate, followed by VAT, period, debtors-ledger and recognition tests actually performed. |
 | spacer | U | widened |
 
 Per table: grey (D9D9D9) bold header row, note row if needed ("No items > PM - 100% systematic"), data rows, `=SUM` totals row (bold), `^` cast row. Each block (A-D, F-I, K-T) gets its **own full grid borders** so blocks read as separate tables. One blank row between sections.
@@ -43,8 +45,9 @@ Per table: grey (D9D9D9) bold header row, note row if needed ("No items > PM - 1
 
 ## Rules
 
-- F-I prefilled from GL as the starting point to be ticked; testing cols blank for fieldwork.
-- VAT `N3` (foreign/no-VAT) applied during testing, not at build.
+- Populate the GL block from the source. Leave documentary invoice fields and test results blank until evidence is received. If the user expressly wants copied GL identifiers in the invoice block, label them provisional rather than claiming they were vouched.
+- Do not blanket-apply 15% or infer zero-rating solely from a foreign customer. Use the applicable rate when supported; otherwise leave the documentary VAT check pending. A GL VAT line is a source observation, not proof of a compliant tax invoice.
 - Excluded items (cancelled pairs, journals in systematic) documented in the selection narrative - never silently dropped.
 - Preparer/reviewer/dates left blank for the auditor to sign.
+- Selection and client-request completion are not audit completion. Do not state "remaining items passed", "amounts verified" or a clean conclusion while support/tests are outstanding.
 - After build: capture a screenshot of the header box and one full table (xlwings `to_png`), read it, fix clipping/dates/borders before reporting.

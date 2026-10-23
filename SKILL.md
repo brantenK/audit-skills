@@ -5,7 +5,7 @@ description: Audit working-paper skills for AI agents - teaches an agent how an 
 
 # Audit skills
 
-A bundle of 24 audit working-paper skills. Each sub-skill lives in `skills/<name>/SKILL.md`.
+A bundle of audit working-paper skills. Each sub-skill lives in `skills/<name>/SKILL.md`.
 
 ## How to use
 
@@ -24,7 +24,11 @@ No client data is included; this bundle is methodology only (see `PRIVACY.md`).
 - `audit-monthly-summary` (`skills/audit-monthly-summary/SKILL.md`): Build a GL monthly summary by adding Net Balance and Month helper columns to a transaction detail sheet and a two-column SUMIF-driven Monthly Analysis sheet reconciled to the trial balance - use when the user asks for a monthly analysis or monthly summary of a general ledger account.
 - `audit-planning-questionnaire` (`skills/audit-planning-questionnaire/SKILL.md`): Restructure a verbose audit planning questionnaire (IT environment / gathering information) from an expanded multi-row layout into a compact, bordered three-panel table in working-paper format. Use when a sheet holds raw questionnaire text spread over many rows and must become an auditable planning document.
 - `audit-working-paper` (`skills/audit-working-paper/SKILL.md`): Review, enhance or build an audit working paper in Excel to review standard - documentation rules (ISA 230), sheet structure and borders, tick marks, coverage boxes, client requests and troubleshooting. Use whenever a working paper must be created, reviewed or brought up to standard.
+- `new-section-paper` (`skills/new-section-paper/SKILL.md`): Build only the requested sheets when no prior-year paper exists, with GL and supporting-documentation tables and a traceable audit trail.
 - `client-gl-extract` (`skills/client-gl-extract/SKILL.md`): Produce a plain extract of selected general ledger lines to send to the client so they know which items to support - use when the user wants to send a sample or list of transactions to the client.
+- `client-request-workbook` (`skills/client-request-workbook/SKILL.md`): One-sheet client requests from approved transactions, plus a simple general-document list and natural covering email.
+- `audit-sampling` (`skills/audit-sampling/SKILL.md`): Simple count-based selection with exact lead-sheet scope, agreed counts and safe corrections.
+- `audit-sampling-pack` (`skills/audit-sampling-pack/SKILL.md`): Reviewer-defensible sampling packs with separate pools, systematic provenance and honest coverage.
 - `completeness-combined` (`skills/completeness-combined/SKILL.md`): Single-section revenue completeness testing - sequence-gap analysis (shared vs split numbering), master-to-billing, cut-off and reversal screen, and earned-vs-billed matching, each procedure with its reason - use when testing completeness of revenue for any client.
 - `employee-costs-update` (`skills/employee-costs-update/SKILL.md`): Roll an employee costs working paper (e.g. a monthly insurance premium account) forward by locating the account in the client GL, extracting its 12 monthly transactions, and updating the ledger and WP sheets with formula-based totals. Use when an employee-cost paper must be updated from the prior year to the current year.
 - `event-dates-cutoff` (`skills/event-dates-cutoff/SKILL.md`): Confirm event or conference dates against organiser sources to test cut-off of prepaid expenses and income received in advance - use when balances relate to future events and the user needs evidence of when they take place.

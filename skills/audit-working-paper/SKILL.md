@@ -31,6 +31,10 @@ Companies Act 71 of 2008:
 
 **Golden thread:** every number traceable - source (TB/GL) -> work performed -> evidence -> conclusion. No hardcoded numbers without a visible source.
 
+**Evidence status:** selected, requested, received and vouched are different stages. A GL extraction or VAT calculation does not prove that the client invoice was inspected. Keep documentary results and pass/fail fields blank until supported; distinguish selected totals from verified totals. Never carry forward a clean conclusion while testing is outstanding.
+
+**Minutes insights:** follow `audit-conventions` §6. Use minutes to inform existing sections, not automatically create a separate minutes paper or more testing. Quote the meeting/date, keep reported statements separate from verified findings, and do not infer a cancellation effective date, missing invoice or confirmed overstatement from discussion alone.
+
 ## 2. Formatting standards
 
 Arial, black text, grey shading only: D9D9D9 headers, F2F2F2 sub-totals. No other colours.
@@ -74,6 +78,7 @@ Standard row map - adapt to the prior-year paper where one exists (`update-from-
 Standard columns: A descriptions/labels (width 45), B amounts (width 18, accounting format), C tick marks (width 12), D source references (width 25).
 
 - Blank rows between sections: set height 6pt for consistent visual spacing.
+- Narrative paragraphs: no merged cells or automatic wrapping. Write through column H, then continue on the next row from A. Keep one blank row before and after headings and between a note block and its table; retain approved template widths.
 - Border every table and merged panel on all four edges, plus inside gridlines.
 - Hide gridlines; landscape print layout, fit to one page wide, repeat row 1 as the print title.
 
@@ -128,7 +133,7 @@ Insert below every testing table to prove the extent of testing:
 | Row | Content | Formula |
 |-----|---------|---------|
 | 1 | Total of account | `=ABS(closing_balance_cell)` |
-| 2 | Amounts verified | `=SUM(tested_items)` or linked total |
+| 2 | Amounts verified | `=SUM(items actually vouched)` or linked verified total, not the entire untested selection |
 | 3 | Coverage % | `=verified/total`, formatted as % |
 
 ## 6. Auditable formulas
@@ -140,7 +145,7 @@ Insert below every testing table to prove the extent of testing:
 
 | Section | Focus | Typical procedures |
 |---------|-------|--------------------|
-| Income 7XX | Occurrence, accuracy | Trace to invoice, delivery note, bank receipt; verify the nature of other income (intercompany vs sundry) and check for agreements |
+| Income 7XX | Occurrence, accuracy | Use the invoice plus the relevant membership/service/agreement records for the agreed procedure. Do not apply a generic delivery-note requirement to membership or conferences. Payment does not by itself prove the correct recognition period. Verify other income against its own section scope. |
 | Expenses 6XX | Completeness, classification | Agree to supplier invoice, check the date (cut-off), verify VAT treatment |
 | Assets 1XX-2XX | Existence, valuation | Receivables: confirmations, provision for bad debts. Inventory: count, lower of cost/NRV |
 | Liabilities 3XX-4XX | Completeness (understatement risk) | Supplier statement reconciliations, search for unrecorded liabilities |
@@ -169,7 +174,7 @@ Assess the variance against the engagement config: below clearly trivial - immat
 
 ## 9. Client requests
 
-Create a separate request list containing only what the client needs (per `audit-conventions` §4): date, account, reference, description and amount of each selected transaction, plus the specific questions. No materiality, coverage, findings or conclusions. Mark requested items without colour - list them or use a bold indicator column.
+Use `client-request-workbook`: approved transaction lists plus a separate simple `Document required | Details to include` section for general records. Ask for records, not client performance of our tracing/allocation procedures. Reuse evidence held and request only what the agreed testing needs; no materiality, coverage, findings, conclusions or response boxes unless asked.
 
 Question templates:
 

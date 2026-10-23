@@ -3,7 +3,8 @@
 The repository is public: it must contain methodology only - no client names,
 engagement figures, client account codes or machine-specific paths. Skills also
 follow house format: a SKILL.md per folder, frontmatter name matching the folder,
-the read-conventions-first line, and the grey-only colour palette.
+the read-conventions-first line, and the default grey colour palette with narrow,
+explicitly documented text-colour exceptions.
 """
 
 from __future__ import annotations
@@ -28,6 +29,13 @@ BANNED_COLOURS = [
     "FF0000",  # red
     "0000FF",  # blue
 ]
+
+# This existing skill explicitly specifies source-link/tick-mark colours and
+# opt-in sampled-row marking. Preserve those documented instructions rather
+# than treating them as accidental default fills. Other skills remain gated.
+DOCUMENTED_TEXT_COLOURS = {
+    "new-section-paper": {"00B050", "008000", "0000FF"},
+}
 
 COLOUR_PATTERNS = [
     re.compile(r"\.color\s*=\s*\(\s*\d+\s*,\s*\d+\s*,\s*\d+\s*\)"),
@@ -73,6 +81,15 @@ def test_no_client_data_in_skills():
         for term in BANNED_TERMS:
             assert term not in text, f"{rel} contains banned term {term!r}"
         for colour in BANNED_COLOURS:
+            if colour in DOCUMENTED_TEXT_COLOURS.get(rel.parts[0], set()):
+                continue
             assert colour not in text.upper(), f"{rel} contains non-grey colour {colour!r}"
         for pat in COLOUR_PATTERNS:
             assert not pat.search(text), f"{rel} sets a raw colour value"
+
+
+def test_documented_colour_exceptions_are_still_explicit():
+    text = (SKILLS_DIR / "new-section-paper" / "SKILL.md").read_text(encoding="utf-8")
+    assert "only when the user asks" in text
+    assert "Hyperlinks (source links)" in text
+    assert "Audit-trail reference column" in text

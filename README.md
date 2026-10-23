@@ -19,8 +19,12 @@ cut-off. The skills get better as you use them, and only with your approval.
 | `sample-and-coverage` | Material accounts 100%, remainder sampled, coverage and the sufficiency sentence |
 | `vouch-to-bank` | Trace ledger items to bank statements by amount, date and payee |
 | `client-gl-extract` | A plain extract of ledger lines to send to the client |
+| `client-request-workbook` | One-sheet approved transaction requests, a plain general-document list and a natural covering email |
+| `audit-sampling` | Simple count-based selection with agreed counts, scope checks and safe sample corrections |
+| `audit-sampling-pack` | Reviewer sampling packs: pool separation, systematic provenance and honest coverage |
 | `event-dates-cutoff` | Event and conference dates for prepaid and income-received-in-advance cut-off |
 | `audit-working-paper` | Review, enhance or build a working paper to review standard (ISA 230 documentation, sheet structure, tick marks, coverage boxes, client requests) |
+| `new-section-paper` | Build the requested sheets for a section with no prior-year paper, with aligned GL and supporting-documentation tables |
 | `audit-manager` | Supervision pass: golden-thread checks, quality scan for junior mistakes, review discipline |
 | `wp-analytical-standard` | Build or rebuild the Analytical sheet of a testing paper (prior-year categories, subtotals, tick marks) |
 | `wp-procedures-standard` | Build or rewrite the Procedures sheet (objective, assertion codes, ISA references, scope trimming) |
@@ -91,6 +95,9 @@ never hard-coded in a paper.
   save an image of each edited range in `.audit-skills/evidence/` as proof of the change.
 
 ## How the skills improve
+
+New extracts are unfrozen by default. Agents must not apply Freeze Panes or change existing pane
+settings unless explicitly requested. Live workbook changes remain unsaved unless saving is requested.
 
 1. When you correct your agent, it records the lesson: `propose_improvement` (MCP) or
    `audit-skills improve propose <skill> "<lesson>"`. Amounts, account numbers, emails, paths and the

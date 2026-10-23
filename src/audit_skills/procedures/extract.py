@@ -52,7 +52,7 @@ def gl_extract(lines: list[GLLine], out: Path, entity: str, title: str, source_n
     widths = [14, 34, 12, 36, 16, 16, 36, 14, 14, 14, 10]
     for j, w in enumerate(widths, 1):
         ws.column_dimensions[get_column_letter(j)].width = w
-    ws.freeze_panes = ws.cell(hr + 1, 1)
+    # New workbooks stay unfrozen; pane changes require an explicit user request.
     out = Path(out)
     out.parent.mkdir(parents=True, exist_ok=True)
     wb.save(out)

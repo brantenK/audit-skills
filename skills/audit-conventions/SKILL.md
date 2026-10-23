@@ -27,6 +27,7 @@ These rules apply to every other audit skill. Read them first.
 - Arial. Black text. Grey shading only (D9D9D9 headers, F2F2F2 sub-totals). No other colours.
 - Numbers `#,##0.00;(#,##0.00);"-"`. Dates `dd mmm yyyy`.
 - Totals and checks are formulas, not typed numbers.
+- NEVER apply Freeze Panes or frozen rows/columns unless the user explicitly requests it for that workbook. New workbooks must be unfrozen; preserve existing pane settings unless asked to change them. This overrides template and generated-script defaults.
 
 ## 4. Internal paper versus client output
 
@@ -35,12 +36,19 @@ These rules apply to every other audit skill. Read them first.
   the ledger lines in the ledger's own columns. No materiality, coverage, findings, bank references,
   conclusions or response boxes unless the user asks for them.
 - Never save an internal paper with a name that suggests it is for the client.
+- Ask clients for records and specific missing explanations, not to carry out our audit procedures. We perform ledger tracing, allocation checks and reconciliations ourselves.
+- Keep requests limited to the approved work. Check evidence already held before requesting it again; do not turn every risk noted into another document request or procedure.
 
 ## 5. Scope comes from the lead sheet
 
 - The accounts in scope are the accounts on the lead sheet for that section. Do not add accounts that
   sit nearby in the trial balance (for example an unallocated deposits account) unless the user says so.
 - Totals must agree to the lead sheet.
+- Establish the exact lead-sheet account list, entity, period and relevant posting side before selecting transactions. An invoice reference or an account-code prefix alone does not establish scope.
+- Revenue occurrence uses recognised revenue accounts, not income received in advance or other-income accounts outside the lead. A journal releasing deferred income into recognised revenue can be in scope on its revenue side.
+- Separate a broad invoice-number continuity population from a revenue-value sample. Using all genuine invoices to explain numbering does not authorise sampling all invoice postings as revenue.
+- Do not remove zero-balance accounts or fully reversed items solely because their closing balance is nil. Inspect the underlying movements and decide their relevance to the assertion.
+- Before correcting an approved sample, show the proposed exclusions, retained count and effect on the agreed sample size. Do not silently leave a last-ten table with fewer than ten items or call a filtered subset a new systematic draw. Obtain approval for replacements or a changed scope.
 
 ## 6. Say only what the evidence shows
 
@@ -49,6 +57,17 @@ These rules apply to every other audit skill. Read them first.
 - Auditor adjustments from last year may not be in the client's ledger. Reclassifications (RCL) are
   usually presentation-only: the client does not post them and they do not change totals. Note them in the
   paper; do not treat them as a client action. Never assume the client posted or reversed an adjustment.
+- Distinguish selected, requested, received and vouched items. Selection totals are not amounts verified; blank testing columns cannot support a clean conclusion.
+- Customer/amount matching identifies candidate invoice-credit-note links, not confirmed allocations. Obtain explicit references or allocation evidence before treating a link as proved.
+- Subsequent credit notes and a cancellation reported in minutes flag a potential recognition issue; they do not establish a misstatement without the effective date, entitlement/service period and credit-note reasons.
+- State completion precisely: the sample/request may be complete while documentary testing and the audit conclusion remain outstanding.
+
+### Minutes: insights, not an automatic new audit exercise
+
+- Read minutes for relevant insights into the existing sections. Quote the source meeting/date and distinguish management's statements, allegations and proposals from verified facts.
+- Do not create a separate minutes working paper, extra sheets, investigations or expanded testing unless requested or agreed with the reviewer.
+- A report that invoices were not received is not proof that they were never recorded. A count discussed before year end is not automatically the year-end population.
+- A reported accounting correction is not verified merely because a later account nets to zero; trace the correction to the relevant period, transactions and final balances.
 
 ## 7. Files and folders
 

@@ -14,6 +14,8 @@ The event date decides whether the balance is correctly carried at year end.
 
 ## Steps
 
+0. **Check evidence already held first.** Reuse an adequately documented organiser website date or saved source; do not request all dates again or duplicate research. Planning schedules show intended dates, not necessarily actual occurrence. Follow up only unmatched, unclear, postponed or cancelled events and document the specific limitation.
+
 1. **List the events** from the ledger account names. Prepaid and income-in-advance accounts for the same
    event often share an account suffix; match them.
 2. **Find the dates** on the organiser's own page first. Third-party listings are weaker; mark them.
@@ -28,8 +30,7 @@ The event date decides whether the balance is correctly carried at year end.
    - account labels whose financial year disagrees with the event date,
    - events more than 12 months after year end (non-current),
    - events before year end that still carry a balance.
-6. Stronger evidence is the client's contract, invoice or proforma for the event. Note when only a
-   printed web page is available.
+6. Evidence must answer the question: an organiser page can establish a public event date; agreements/invoices can establish entitlement and service terms. A planning schedule or proforma is not necessarily proof the event occurred. Note limitations and request additional evidence only for a specific unresolved issue, not as a blanket second request.
 
 `audit-skills cutoff table --events <events.csv> --year-end <yyyy-mm-dd>` builds the table with the
 after-year-end and financial-year flags.
