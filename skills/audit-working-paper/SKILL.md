@@ -150,6 +150,16 @@ Insert below every testing table to prove the extent of testing:
 | Assets 1XX-2XX | Existence, valuation | Receivables: confirmations, provision for bad debts. Inventory: count, lower of cost/NRV |
 | Liabilities 3XX-4XX | Completeness (understatement risk) | Supplier statement reconciliations, search for unrecorded liabilities |
 
+### Cash on hand and foreign currency
+
+- Agree the count to the ledger currency by currency, then convert at the rate the client used. Compare
+  that rate with the rate implied by the foreign bank account; a difference is a valuation point even
+  when the amount is small.
+- Record the date of the count. An undated count sheet is a documentation weakness - state the date on
+  the paper or get the client to confirm it.
+- Where a ledger balance was negative or unsupported and was written up to the count, treat the write-up
+  as a correction. Identify the account it was posted to and whether it belongs in profit or loss.
+
 ## 8. Reconcile before you write
 
 1. **Find the source data:** the prior-year recon (structure, tick marks, reconciling items), the analytical sheet, the GL extract, and any independent report the client produces (payroll report, provision schedule).

@@ -58,6 +58,15 @@ A single-sheet workbook listing the approved transactions and essential supporti
 - Mention essential general documents explicitly in the email (e.g. debtors report and member register) so the client does not overlook the bottom of the workbook. Avoid rigid headings or a formal template unless requested.
 - Do not add evidence requests to the email that are not in the agreed schedule. Draft in the conversation when requested; drafting is not sending.
 
+## Page layout
+
+- A4 landscape, fit to one page wide, gridlines off, no freeze panes.
+- Wrap the long `Details to include` column and set row heights explicitly from the text length.
+  openpyxl does not auto-fit, and a default row height clips the wrapped text.
+- Put a manual page break before a section heading rather than letting a heading fall at the foot of a
+  page. Render to PDF and read every page before sending.
+- Keep each section block whole: a table that starts on one page should not finish on the next.
+
 ## Check before sending
 
 - Every line traces to the ledger extract (account + reference + amount).

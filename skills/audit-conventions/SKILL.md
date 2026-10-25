@@ -27,6 +27,9 @@ These rules apply to every other audit skill. Read them first.
 - Arial. Black text. Grey shading only (D9D9D9 headers, F2F2F2 sub-totals). No other colours.
 - Numbers `#,##0.00;(#,##0.00);"-"`. Dates `dd mmm yyyy`.
 - Totals and checks are formulas, not typed numbers.
+- Rebuilding a table does not license a new border style. Reproduce the prior-year convention: detail
+  rows carry no borders, a subtotal row a single top and double bottom, the grand total a double top and
+  double bottom, and a grey header band instead of a grid. Never box every cell of a rebuilt table.
 - NEVER apply Freeze Panes or frozen rows/columns unless the user explicitly requests it for that workbook. New workbooks must be unfrozen; preserve existing pane settings unless asked to change them. This overrides template and generated-script defaults.
 
 ## 4. Internal paper versus client output
@@ -69,6 +72,31 @@ These rules apply to every other audit skill. Read them first.
 - A report that invoices were not received is not proof that they were never recorded. A count discussed before year end is not automatically the year-end population.
 - A reported accounting correction is not verified merely because a later account nets to zero; trace the correction to the relevant period, transactions and final balances.
 
+### Notes: findings only, always anchored
+
+- Do not add a Notes block to any sheet unless the user asks for one. Ask first; a notes section is not
+  part of a default build, and a sheet may be complete without one.
+- A note exists to explain something the reader would otherwise query: a difference and its cause, a
+  limitation on the evidence, an exception, a report to management, a scope exclusion that changes a
+  total, or a cross-reference to another working paper.
+- Never use notes for procedure descriptions, restatements of the balance, or a narrative of what the
+  auditor did. That belongs in the procedures or the work-done table, where the reader expects it.
+- Every note must be anchored: put a superscript `N1`, `N2` on the row, amount or cell it explains. A
+  note with nothing pointing to it is dead text - do not write it.
+- Where there is nothing to report, write `None`, as the prior-year papers do.
+- Prior-year shape to reproduce (the shape, not the wording): finding -> explanation -> report to
+  management raised -> cross-reference to the supporting paper.
+- When notes are deleted or renumbered, sweep the whole workbook in the same pass for references to
+  them - including cross-sheet ones such as `Analytical N1` - and remove or re-point every one.
+
+### Evidence the client already sent
+
+- Search Sent Items as well as the Inbox. Count sheets, confirmations and schedules that the auditor
+  sent to the client sit in Sent, not in the Inbox.
+- Attachments are often scans with no text layer. Render the page to an image and read it; an empty text
+  extraction does not mean an empty document.
+- A document already held is not outstanding. Check what is held before adding it to a client request.
+
 ## 7. Files and folders
 
 - Client workpaper folders are read-only unless the user names the file to change.
@@ -81,6 +109,9 @@ These rules apply to every other audit skill. Read them first.
   approval: they run `audit-skills approve <workbook>` themselves. You cannot approve it for them.
 - File mode cannot keep cached values of external links (such as Caseware links). If a workbook has
   external links, prefer live mode or warn the user before saving in file mode.
+- Saving a workbook with openpyxl - including a file-mode edit such as deleting a sheet - flattens
+  per-character formatting. Superscript tick marks, legend entries and note references come back as
+  plain text. Re-apply them in live Excel afterwards and verify per character, not by cell value.
 
 ## 9. Check before you hand over
 

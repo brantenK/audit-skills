@@ -24,7 +24,7 @@ Client-agnostic: bracketed values like `<PM>`, `<Section>`, `<GL file>` are per-
 6. **Work-done TB table** - category blocks (§2). This is the body of the sheet.
 7. **Legends** - tick key, styled per §4.
 8. **Conclusion** - `Based on procedures performed and results obtained we have reasonable assurance that <section> are not materially misstated.`
-9. **Never on an Analytical sheet:** monthly analysis, Notes/N1-N3 sections, gross-profit analysis (unless the section genuinely has COGS linkage).
+9. **Never on an Analytical sheet:** monthly analysis, Notes/N1-N3 sections, gross-profit analysis (unless the section genuinely has COGS linkage). Add notes only if the user asks for them, and then only findings, each anchored by a superscript on the line it explains (`audit-conventions` §6).
 
 ## 2. Category-block table (the prior-year pattern)
 
@@ -47,6 +47,7 @@ Total <Category>                =SUM(...)     ^ BAFS  | =SUM(...)     ^ BPYAFS  
 ## 3. Bold and borders
 
 - **Detail rows:** not bold, no borders.
+- Rebuilding a table does not license a new border style. The house look is no grid at all: detail rows borderless, subtotal single top plus double bottom, grand total double top plus double bottom, grey header band only.
 - **Subtotal rows:** bold, top border single-thin, bottom border double-thick.
 - **Grand total:** bold, top double-thick, bottom double-thick.
 - Excel shares edges between adjacent rows, so style top-down (subtotals before grand total) and verify edge-aware: a detail row above a subtotal legitimately shows the subtotal's top border on its bottom edge; a spacer below shows the double on its top edge.

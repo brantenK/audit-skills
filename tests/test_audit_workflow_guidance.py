@@ -51,6 +51,48 @@ def test_new_sampling_skills_are_installed_with_refinements(tmp_path, monkeypatc
         assert "Read `audit-conventions` first." in target.read_text(encoding="utf-8")
 
 
+def test_notes_are_findings_only_and_anchored():
+    text = skill("audit-conventions")
+    assert "Notes: findings only, always anchored" in text
+    assert "unless the user asks for one" in text
+    assert "Every note must be anchored" in text
+    assert "dead text" in text
+    assert "Never use notes for procedure descriptions" in text
+    assert "sweep the whole workbook" in text
+
+
+def test_evidence_search_includes_sent_items():
+    text = skill("audit-conventions")
+    assert "Search Sent Items as well as the Inbox" in text
+    assert "scans with no text layer" in text
+    assert "A document already held is not outstanding" in text
+
+
+def test_rebuild_keeps_prior_year_border_convention():
+    assert "does not license a new border style" in skill("audit-conventions")
+    assert "does not license a new border style" in skill("wp-analytical-standard")
+    assert "Never box every cell" in skill("audit-conventions")
+
+
+def test_file_mode_save_flattens_rich_text():
+    assert "flattens" in skill("audit-conventions")
+    assert "verify per character" in skill("audit-conventions")
+
+
+def test_client_request_page_layout_is_checked():
+    text = skill("client-request-workbook")
+    assert "A4 landscape" in text
+    assert "manual page break" in text
+    assert "openpyxl does not auto-fit" in text
+
+
+def test_cash_count_guidance_covers_rate_and_date():
+    text = skill("audit-working-paper")
+    assert "Cash on hand and foreign currency" in text
+    assert "rate implied by the foreign bank account" in text
+    assert "An undated count sheet is a documentation weakness" in text
+
+
 def test_bundle_index_lists_every_skill():
     index = (ROOT / "SKILL.md").read_text(encoding="utf-8")
     for path in (ROOT / "skills").iterdir():
